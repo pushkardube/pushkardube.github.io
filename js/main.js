@@ -154,12 +154,12 @@
     GR = (s.getPropertyValue('--accent-end') || '#37e06b').trim();
     isLight = document.documentElement.getAttribute('data-theme') === 'light';
     if (isLight) {
-      INK = '#0b3f39';
-      SUB = 'rgba(7,120,110,.9)';
-      LINE = 'rgba(7,140,128,.45)';   // ranging line — strong enough on white
-      RING = '7,140,128';
-      DLBL = 'rgba(6,110,100,.95)';   // distance label
-      HALO = 'rgba(255,255,255,.9)';
+      INK = '#08312c';                // reticle / coordinate text
+      SUB = 'rgba(10,70,64,.95)';     // anchor labels
+      LINE = 'rgba(9,90,82,.65)';     // ranging line — darker so it reads on greige
+      RING = '9,90,82';               // anchor rings + pulse dots
+      DLBL = '#075048';               // distance numbers (solid dark teal)
+      HALO = 'rgba(246,241,232,.95)'; // outline matches the warm bg
     } else {
       INK = '#eafffb';
       SUB = 'rgba(159,180,184,.8)';

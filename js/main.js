@@ -145,6 +145,7 @@
 (function () {
   const canvas = document.getElementById('uwbLocalizer');
   const posEl = document.getElementById('uwbPos');
+  const hud = document.getElementById('uwbHud');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
   var CY, GR, INK, SUB, LINE, RING, DLBL, HALO, isLight;
@@ -295,6 +296,12 @@
   }
 
   function frame() {
+    // bright on the opening screen, dimmed (but always present) once you scroll into content
+    const heroH = (document.querySelector('.hero') || {}).offsetHeight || window.innerHeight;
+    const fade = Math.max(0.22, Math.min(1, 1 - window.scrollY / (heroH * 0.7)));
+    canvas.style.opacity = fade.toFixed(3);
+    if (hud) hud.style.opacity = fade.toFixed(3);
+
     const now = performance.now();
     schedule(now);
     ctx.clearRect(0, 0, W, H);
@@ -325,7 +332,7 @@
     t += 1;
   }
 
-  if (reduce) { frame(); return; }
+  if (reduce) { frame(); window.addEventListener('scroll', frame, { passive: true }); return; }
   let running = true;
   document.addEventListener('visibilitychange', () => { running = !document.hidden; if (running) loop(); });
   function loop() { if (!running) return; frame(); requestAnimationFrame(loop); }

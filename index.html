@@ -232,7 +232,7 @@
             <div class="project-info">
               <h3>UWB Ranging Security Research <span class="project-badge">COSIC</span></h3>
               <p class="project-org">imec-COSIC, KU Leuven, Belgium <span class="sep">·</span> Jun 2026 – Present</p>
-              <p>Physical-layer security research on Ultra-Wideband ranging. Built SS/DS-TWR and STS-secured (IEEE 802.15.4z) ranging firmware from scratch on the Qorvo DWM3001CDK in Zephyr, antenna-delay calibration, delayed-TX scheduling, CIA timestamp gating. Reproduced and bench-verified real-hardware attacks, Cicada pulse-train, Ghost Peak distance reduction (~5 m against an STS-secured link), and UWBAD selective/flood jamming, against Qorvo CLI firmware and the Apple NI iPhone link. Reverse-engineered live FiRa and Apple NI traffic from passive captures and built a FAST attack-success pipeline with Clopper–Pearson intervals.</p>
+              <p>Physical-layer security research on Ultra-Wideband ranging. Built SS/DS-TWR and STS-secured (802.15.4z) ranging firmware from scratch on the Qorvo DWM3001CDK in Zephyr, then reproduced and bench-verified real-hardware attacks, Cicada, Ghost Peak distance reduction (~5 m against an STS-secured link), and UWBAD jamming, against stock Qorvo firmware and the Apple NI iPhone link.</p>
               <div class="project-tech">
                 <span>UWB</span>
                 <span>DW3000</span>
@@ -306,7 +306,7 @@
             <div class="project-info">
               <h3>GantryMate-200</h3>
               <p class="project-org">Electrolyte Solutions <span class="sep">·</span> Jun – Sep 2025</p>
-              <p>A 3-axis automated gantry for high-precision screwing of ~280 miniature (1 mm) screws, at ~0.05 mm repeatable positioning. Coordinated-motion and homing firmware on ESP32 (ESP-IDF), NEMA17 steppers driven by DRV8825 / TMC2208 with microstepping, plus a custom PCB for motor-driver integration and power distribution, and full mechanical CAD in Onshape.</p>
+              <p>A 3-axis automated gantry that drives ~280 miniature (1 mm) screws at ~0.05 mm repeatable accuracy. Coordinated-motion and homing firmware on ESP32 (ESP-IDF) with NEMA17 / DRV8825 / TMC2208 microstepping, a custom motor-driver PCB, and full Onshape CAD.</p>
               <div class="project-tech">
                 <span>ESP32</span>
                 <span>ESP-IDF</span>
@@ -330,7 +330,7 @@
             <div class="project-info">
               <h3>High-Precision UWB Localization</h3>
               <p class="project-org">Krishna Defence &amp; Allied Industries Ltd. <span class="sep">·</span> Jan – Apr 2026</p>
-              <p>A centimetre-scale indoor positioning system on Qorvo DWM3001 modules (IEEE 802.15.4z HRP UWB), reaching ~2 cm ranging accuracy with Double-Sided Two-Way Ranging. Built custom firmware for timestamp acquisition, antenna-delay calibration and clock-drift compensation, and developed scalable multi-anchor TDoA infrastructure for ship dry-docking, with structured error analysis of clock skew, sync drift, timestamp quantization and multipath.</p>
+              <p>A centimetre-scale indoor positioning system on Qorvo DWM3001 (802.15.4z HRP UWB), reaching ~2 cm accuracy with Double-Sided Two-Way Ranging. Built custom timestamp, antenna-delay and clock-drift firmware, plus multi-anchor TDoA infrastructure for ship dry-docking.</p>
               <div class="project-tech">
                 <span>UWB</span>
                 <span>DWM3001</span>
@@ -565,6 +565,19 @@
       <p>&copy; 2026 Pushkar Dube. Built with HTML, CSS & JS.</p>
     </div>
   </footer>
+
+  <!-- Gantry-axis scrollbar: stepper -> rods -> toolhead carriage -->
+  <div class="scroll-rail" id="scrollRail" aria-hidden="true">
+    <div class="rail-motor"><span class="rail-coupler" id="railCoupler"></span></div>
+    <div class="rail-track">
+      <div class="rail-rod left"></div>
+      <div class="rail-rod right"></div>
+      <div class="rail-ticks" id="railTicks"></div>
+      <div class="rail-carriage" id="railCarriage">
+        <span class="bearing"></span><span class="bearing"></span><span class="bearing"></span><span class="bearing"></span>
+      </div>
+    </div>
+  </div>
 
   <!-- Command palette (⌘K) -->
   <div class="cmdk" id="cmdk" role="dialog" aria-modal="true" aria-label="Command palette">

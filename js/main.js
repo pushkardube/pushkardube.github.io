@@ -415,3 +415,54 @@
   list.addEventListener('mousemove', e => { const it = e.target.closest('.cmdk-item'); if (it && +it.dataset.i !== active) { active = +it.dataset.i; render(); } });
   overlay.addEventListener('click', e => { if (e.target === overlay) close(); });
 })();
+
+// ── Gantry-axis scrollbar: passive progress indicator (no scroll hijack) ──
+(function () {
+  const rail = document.getElementById('scrollRail');
+  const ticksEl = document.getElementById('railTicks');
+  const carriage = document.getElementById('railCarriage');
+  const coupler = document.getElementById('railCoupler');
+  if (!rail || !ticksEl || !carriage) return;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const NAV = 80;
+
+  const stops = [];
+  let major = 0;
+  document.querySelectorAll('section[id]').forEach(sec => {
+    if (sec.id === 'projects') {
+      sec.querySelectorAll('.projects-category-title').forEach(cat => stops.push({ el: cat, major: false, label: cat.textContent.trim() }));
+    } else {
+      stops.push({ el: sec, major: true, n: major++, label: sec.id });
+    }
+  });
+  if (!stops.length) return;
+
+  stops.forEach(st => {
+    const t = document.createElement('button');
+    t.className = 'rail-tick' + (st.major ? '' : ' minor');
+    t.innerHTML = '<span class="rt-num">' + (st.major ? String(st.n).padStart(2, '0') : st.label) + '</span><span class="rt-dot"></span>';
+    t.setAttribute('aria-label', 'Go to ' + st.label);
+    t.addEventListener('click', () => window.scrollTo({ top: yOf(st), behavior: 'smooth' }));
+    ticksEl.appendChild(t);
+    st.tick = t;
+  });
+
+  const docMax = () => Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+  function yOf(st) { return Math.min(docMax(), Math.max(0, st.el.classList.contains('hero') ? 0 : st.el.offsetTop - NAV)); }
+  function placeTicks() { const m = docMax(); stops.forEach(st => { st.tick.style.top = (yOf(st) / m * 100) + '%'; }); }
+
+  let active = -1;
+  function update() {
+    const y = window.scrollY, m = docMax();
+    carriage.style.top = (Math.min(1, Math.max(0, y / m)) * 100) + '%';
+    if (coupler && !reduce) coupler.style.transform = 'rotate(' + (y * 0.5) + 'deg)';
+    let idx = 0;
+    stops.forEach((st, i) => { if (yOf(st) - 2 <= y) idx = i; });
+    if (idx !== active) { active = idx; stops.forEach((st, k) => st.tick.classList.toggle('on', k === idx)); }
+  }
+  function refresh() { placeTicks(); update(); }
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', refresh);
+  window.addEventListener('load', refresh);
+  refresh();
+})();

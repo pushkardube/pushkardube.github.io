@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pushkar Dube — Electronics &amp; Embedded Systems Developer</title>
-  <meta name="description" content="Portfolio of Pushkar Dube — B.Tech ECE student at VJTI Mumbai, specializing in embedded systems, robotics, PCB design, and full-stack web development.">
+  <title>Pushkar Dube — Embedded Systems &amp; Wireless Security</title>
+  <meta name="description" content="Portfolio of Pushkar Dube — B.Tech ECE student at VJTI Mumbai, specializing in embedded systems, RF and wireless security, UWB ranging, and PCB design.">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Pushkar Dube — Electronics &amp; Embedded Systems Developer">
-  <meta property="og:description" content="Portfolio of Pushkar Dube — B.Tech ECE student at VJTI Mumbai, specializing in embedded systems, robotics, PCB design, and full-stack web development.">
+  <meta property="og:title" content="Pushkar Dube — Embedded Systems &amp; Wireless Security">
+  <meta property="og:description" content="Portfolio of Pushkar Dube — B.Tech ECE student at VJTI Mumbai, specializing in embedded systems, RF and wireless security, UWB ranging, and PCB design.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://pushkar.github.io">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Pushkar Dube — Electronics &amp; Embedded Systems Developer">
-  <meta name="twitter:description" content="Portfolio of Pushkar Dube — B.Tech ECE student at VJTI Mumbai, specializing in embedded systems, robotics, PCB design, and full-stack web development.">
+  <meta name="twitter:title" content="Pushkar Dube — Embedded Systems &amp; Wireless Security">
+  <meta name="twitter:description" content="Portfolio of Pushkar Dube — B.Tech ECE student at VJTI Mumbai, specializing in embedded systems, RF and wireless security, UWB ranging, and PCB design.">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,6 +23,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
+  <script>(function(){var t="dark";try{t=localStorage.getItem("theme")||"dark";}catch(e){}document.documentElement.setAttribute("data-theme",t);})();</script>
 </head>
 <body>
   <!-- Skip link -->
@@ -41,9 +42,16 @@
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#blog">Blog</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+        <button class="cmdk-btn" id="cmdkBtn" type="button" aria-label="Open command palette" title="Command palette (⌘K)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <span class="cmdk-label">Jump to…</span><kbd>⌘K</kbd>
+        </button>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch color theme" title="Switch theme">
+          <svg class="ic-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="ic-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
     </div>
   </nav>
 
@@ -54,10 +62,15 @@
         <div class="hero-content">
           <p class="hero-greeting">Hi, I'm</p>
           <h1 class="hero-name">Pushkar Dube</h1>
-          <p class="hero-tagline">Electronics &amp; Embedded Systems Developer</p>
+          <p class="hero-tagline">Embedded Systems · RF &amp; Wireless Security · PCB Design</p>
+          <ul class="hero-spec" aria-label="At a glance">
+            <li><span class="k">LOC</span> Mumbai, IN</li>
+            <li><span class="k">FOCUS</span> UWB · RF Security</li>
+            <li><span class="k">STATUS</span> <span class="live-dot" aria-hidden="true"></span> open to work</li>
+          </ul>
           <div class="hero-cta">
-            <a href="#projects" class="btn btn-primary">View My Work</a>
-            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            <a href="#projects" class="btn btn-primary">View Signals</a>
+            <a href="#contact" class="btn btn-secondary">Establish Link</a>
           </div>
         </div>
       </div>
@@ -74,7 +87,7 @@
       <div class="container">
         <div class="section-header reveal">
           <h2 class="section-title">About <span class="accent-text">Me</span></h2>
-          <p class="section-subtitle">A little bit about who I am</p>
+          <p class="section-subtitle">The operator behind the signals</p>
         </div>
         <div class="about-grid reveal">
           <div class="about-image">
@@ -83,15 +96,21 @@
           <div class="about-text">
             <h3>Hello! I'm Pushkar Dube.</h3>
             <p>
-              I'm a B.Tech Electronics and Communication Engineering student at VJTI, Mumbai,
-              and pursuing a parallel B.S in Data Science from IIT Madras. I specialize in
-              embedded systems, robotics, PCB design, and full-stack web development.
+              I'm an embedded &amp; <b>wireless-security</b> engineer — a B.Tech Electronics
+              &amp; Telecommunication student at VJTI Mumbai, with a parallel B.S. in Data Science
+              from IIT Madras. I build radio systems from the physical layer up: Ultra-Wideband
+              ranging stacks, secure-ranging attacks, RF PCBs, and the firmware underneath.
             </p>
             <p>
-              I'm an active contributor at the Society of Robotics and Automation (SRA) at VJTI,
-              where I work on robotics projects and embedded systems workshops.
-              I love designing hardware systems end-to-end — from PCB schematics in KiCad to
-              firmware on ESP32 to mechanical CAD in Onshape.
+              I like owning a system end-to-end — schematic and layout in KiCad, firmware on
+              ESP32 and Zephyr, mechanical CAD in Onshape — and then breaking it to understand
+              how it really behaves. Lately that's meant physical-layer attacks on commercial
+              secure-ranging devices and machine-learning approaches to wireless localization.
+            </p>
+            <p>
+              I'm <b>Sponsorship Head</b> at the <b>Society of Robotics &amp; Automation (SRA)</b>
+              at VJTI, where I've run embedded-firmware and PCB workshops for 400+ first-year
+              students — from line-following Wall-E bots and image-processing to ROS2 manipulators.
             </p>
           </div>
         </div>
@@ -103,46 +122,64 @@
       <div class="container">
         <div class="section-header reveal">
           <h2 class="section-title">Skills & <span class="accent-text">Resume</span></h2>
-          <p class="section-subtitle">Technologies I work with</p>
+          <p class="section-subtitle">From the PHY layer up to the application</p>
         </div>
         <div class="skills-grid reveal">
           <div class="skill-category">
-            <h3>Languages</h3>
+            <h3>Wireless &amp; RF</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">UWB / DW3000</span>
+              <span class="skill-tag">802.15.4z</span>
+              <span class="skill-tag">Secure Ranging</span>
+              <span class="skill-tag">WiFi CSI</span>
+              <span class="skill-tag">Sub-GHz (CC1101)</span>
+              <span class="skill-tag">RF PCB</span>
+              <span class="skill-tag">Signal Processing</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Embedded &amp; Firmware</h3>
             <div class="skill-tags">
               <span class="skill-tag">C</span>
               <span class="skill-tag">C++</span>
-              <span class="skill-tag">Python</span>
-              <span class="skill-tag">Java</span>
-              <span class="skill-tag">JavaScript</span>
-              <span class="skill-tag">TypeScript</span>
-              <span class="skill-tag">HTML</span>
-              <span class="skill-tag">CSS</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>Embedded &amp; Hardware</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">ESP32</span>
-              <span class="skill-tag">ESP-IDF</span>
+              <span class="skill-tag">ESP32 / ESP-IDF</span>
+              <span class="skill-tag">Zephyr RTOS</span>
+              <span class="skill-tag">nRF Connect SDK</span>
               <span class="skill-tag">KiCad</span>
-              <span class="skill-tag">Onshape</span>
-              <span class="skill-tag">Motor Control</span>
-              <span class="skill-tag">PID</span>
-              <span class="skill-tag">UWB</span>
-              <span class="skill-tag">Raspberry Pi</span>
+              <span class="skill-tag">I²C / SPI</span>
             </div>
           </div>
           <div class="skill-category">
-            <h3>Web &amp; Tools</h3>
+            <h3>Robotics &amp; Simulation</h3>
             <div class="skill-tags">
+              <span class="skill-tag">ROS2</span>
+              <span class="skill-tag">Gazebo</span>
+              <span class="skill-tag">MuJoCo</span>
+              <span class="skill-tag">Onshape</span>
+              <span class="skill-tag">Fusion 360</span>
+              <span class="skill-tag">Motion Control</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Software &amp; Data</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">PyTorch</span>
+              <span class="skill-tag">Reinforcement Learning</span>
               <span class="skill-tag">React</span>
+              <span class="skill-tag">TypeScript</span>
               <span class="skill-tag">Flask</span>
-              <span class="skill-tag">Deno</span>
-              <span class="skill-tag">MySQL</span>
-              <span class="skill-tag">SQLite</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Tools &amp; Workflow</h3>
+            <div class="skill-tags">
               <span class="skill-tag">Git</span>
               <span class="skill-tag">Linux</span>
-              <span class="skill-tag">SSH</span>
+              <span class="skill-tag">SEGGER RTT</span>
+              <span class="skill-tag">GNU Radio</span>
+              <span class="skill-tag">Wireshark</span>
+              <span class="skill-tag">Bash</span>
             </div>
           </div>
         </div>
@@ -151,8 +188,8 @@
         <div class="timeline reveal">
           <div class="timeline-item">
             <span class="timeline-date">Aug 2024 — Present</span>
-            <h4>B.Tech in Electronics &amp; Communication Engineering</h4>
-            <p>Veermata Jijabai Technological Institute (VJTI), Mumbai — CGPA: 8.36/10</p>
+            <h4>B.Tech in Electronics &amp; Telecommunication Engineering</h4>
+            <p>Veermata Jijabai Technological Institute (VJTI), Mumbai — CGPA: 7.72/10</p>
           </div>
           <div class="timeline-item">
             <span class="timeline-date">Aug 2024 — Present</span>
@@ -162,7 +199,7 @@
         </div>
 
         <div class="resume-link reveal">
-          <a href="#" class="btn btn-secondary">Download Resume</a>
+          <a href="assets/Pushkar_Dube_CV.pdf" class="btn btn-secondary" download>Download Résumé</a>
         </div>
       </div>
     </section>
@@ -175,24 +212,26 @@
           <p class="section-subtitle">Things I've built across industry, competitions, and personal work</p>
         </div>
 
-        <!-- Industrial / Internship -->
-        <h3 class="projects-category-title reveal">Industrial &amp; Internship</h3>
+        <!-- Research & Security -->
+        <h3 class="projects-category-title reveal">Research &amp; Security</h3>
         <div class="projects-grid">
           <article class="project-card reveal">
             <div class="project-image">
-              <span>Screenshot</span>
+              <img src="assets/img/cosic-ghostpeak.png" alt="Packet-level comparison of Cicada and Ghost Peak UWB ranging attacks" loading="lazy">
             </div>
             <div class="project-info">
-              <h3>GantryMate-200</h3>
-              <p>A 3-axis automated gantry system for high-precision screwing of ~280 miniature (1mm) screws on LED panels. Achieved sub-millimeter positioning accuracy (~0.05mm) with custom PCB, ESP32 firmware via ESP-IDF, and full mechanical CAD in Onshape.</p>
+              <h3>UWB Ranging Security Research <span class="project-badge">COSIC</span></h3>
+              <p class="project-org">imec-COSIC, KU Leuven, Belgium <span class="sep">·</span> Jun 2026 – Present</p>
+              <p>Physical-layer security research on Ultra-Wideband ranging. Built SS/DS-TWR and STS-secured (IEEE 802.15.4z) ranging firmware from scratch on the Qorvo DWM3001CDK in Zephyr — antenna-delay calibration, delayed-TX scheduling, CIA timestamp gating. Reproduced and bench-verified real-hardware attacks — Cicada pulse-train, Ghost Peak distance reduction (~5 m against an STS-secured link), and UWBAD selective/flood jamming — against Qorvo CLI firmware and the Apple NI iPhone link. Reverse-engineered live FiRa and Apple NI traffic from passive captures and built a FAST attack-success pipeline with Clopper–Pearson intervals.</p>
               <div class="project-tech">
-                <span>ESP32</span>
-                <span>ESP-IDF</span>
-                <span>KiCad</span>
-                <span>Onshape</span>
+                <span>UWB</span>
+                <span>DW3000</span>
+                <span>Zephyr RTOS</span>
+                <span>802.15.4z</span>
+                <span>RF Security</span>
               </div>
               <div class="project-links">
-                <a href="https://github.com/pushkardube" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/pushkardube/cosic-uwb-research" target="_blank" rel="noopener noreferrer">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
                   Code
                 </a>
@@ -202,18 +241,167 @@
 
           <article class="project-card reveal">
             <div class="project-image">
-              <span>Screenshot</span>
+              <img src="assets/img/rl.svg" alt="Reinforcement-learning reward curve for the Urey-ML attack-parameter optimizer" loading="lazy">
             </div>
             <div class="project-info">
-              <h3>UWB-Based Localization System</h3>
-              <p>Implemented Ultra-Wideband ranging using Qorvo DWM3001 modules for indoor positioning. Performed 2D position estimation using trilateration and analyzed synchronization effects, noise, and ranging errors.</p>
+              <h3>Urey-ML — RL Attack-Parameter Optimizer <span class="project-badge status-live">Ongoing</span></h3>
+              <p>A reproduction of Urey-ML (Liu et al., IEEE TIFS 2026): a deep-reinforcement-learning agent (DQN) that learns to tune a UWB distance-reduction attack's transmit power and delay so the forged range mimics natural motion and stays under the ranging-awareness kill-switch. Converges in simulation to a stealthy, high-yield policy; real-DW3000/iPhone hardware hooks are in progress.</p>
+              <div class="project-tech">
+                <span>Reinforcement Learning</span>
+                <span>DQN</span>
+                <span>PyTorch</span>
+                <span>UWB</span>
+                <span>DW3000</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/pushkardube/urey-ml-rl" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-image">
+              <img src="assets/img/wificsi.svg" alt="WiFi Channel State Information amplitude and phase used for indoor localization" loading="lazy">
+            </div>
+            <div class="project-info">
+              <h3>WiFi CSI Localization <span class="project-badge status-live">Ongoing</span></h3>
+              <p>Indoor localization and sensing from WiFi Channel State Information (CSI) on ESP32. Capturing per-subcarrier amplitude and phase with the ESP-CSI framework and processing it to infer position and motion — non-contact, infrastructure-free sensing that rides on ordinary WiFi. Data pipeline and estimation are under active development.</p>
+              <div class="project-tech">
+                <span>WiFi CSI</span>
+                <span>ESP32</span>
+                <span>ESP-IDF</span>
+                <span>DSP</span>
+                <span>Localization</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/pushkardube/esp-csi" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  Code
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Industrial / Internship -->
+        <h3 class="projects-category-title reveal">Industrial &amp; Internship</h3>
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-image">
+              <img src="assets/img/gantry.png" alt="CAD model of the GantryMate-200 3-axis gantry" loading="lazy">
+            </div>
+            <div class="project-info">
+              <h3>GantryMate-200</h3>
+              <p class="project-org">Electrolyte Solutions <span class="sep">·</span> Jun – Sep 2025</p>
+              <p>A 3-axis automated gantry for high-precision screwing of ~280 miniature (1 mm) screws, at ~0.05 mm repeatable positioning. Coordinated-motion and homing firmware on ESP32 (ESP-IDF), NEMA17 steppers driven by DRV8825 / TMC2208 with microstepping, plus a custom PCB for motor-driver integration and power distribution, and full mechanical CAD in Onshape.</p>
+              <div class="project-tech">
+                <span>ESP32</span>
+                <span>ESP-IDF</span>
+                <span>Motion Control</span>
+                <span>KiCad</span>
+                <span>Onshape</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/SarvaarthN/Eklavya_Gantry" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-image">
+              <img src="assets/img/ranging.svg" alt="UWB trilateration with fixed anchors and a mobile tag" loading="lazy">
+            </div>
+            <div class="project-info">
+              <h3>High-Precision UWB Localization</h3>
+              <p class="project-org">Krishna Defence &amp; Allied Industries Ltd. <span class="sep">·</span> Jan – Apr 2026</p>
+              <p>A centimetre-scale indoor positioning system on Qorvo DWM3001 modules (IEEE 802.15.4z HRP UWB), reaching ~2 cm ranging accuracy with Double-Sided Two-Way Ranging. Built custom firmware for timestamp acquisition, antenna-delay calibration and clock-drift compensation, and developed scalable multi-anchor TDoA infrastructure for ship dry-docking — with structured error analysis of clock skew, sync drift, timestamp quantization and multipath.</p>
               <div class="project-tech">
                 <span>UWB</span>
                 <span>DWM3001</span>
-                <span>Trilateration</span>
+                <span>DS-TWR</span>
+                <span>TDoA</span>
+                <span>802.15.4z</span>
               </div>
               <div class="project-links">
-                <a href="https://github.com/pushkardube" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/vedantmalkar/zephyr-dw3001cdk-tdoa" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  Code
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Hardware & PCB Design -->
+        <h3 class="projects-category-title reveal">Hardware &amp; PCB Design</h3>
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-image">
+              <img src="assets/img/aura-pcb.png" alt="3D render of the AURA RF energy-harvester PCB" loading="lazy">
+            </div>
+            <div class="project-info">
+              <h3>AURA — RF Energy Harvester</h3>
+              <p>A custom PCB for RF energy harvesting, built around an ADG936 RF switch and a BAT85 Schottky-diode rectifier feeding dual dipole antennas. Designed the full schematic and 2-layer board in KiCad — including the RF signal path, decoupling, and dedicated RF/clock test points.</p>
+              <div class="project-tech">
+                <span>KiCad</span>
+                <span>RF Design</span>
+                <span>Energy Harvesting</span>
+                <span>ADG936</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/moonknightnotfound/Aura" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-image">
+              <img src="assets/img/platy-pcb.png" alt="3D render of the PlatyPulse multi-tool PCB" loading="lazy">
+            </div>
+            <div class="project-info">
+              <h3>PlatyPulse — Multi-Tool PCB</h3>
+              <p class="project-org">Mentor <span class="sep">·</span> Jul 2026 – Present</p>
+              <p>A handheld, Flipper-Zero-inspired multi-tool board that combines an ESP32-S3 with a CC1101 sub-GHz radio, a PN532 NFC controller, and an IR transceiver on a single PCB. Contributed a full, datasheet-verified design review of the schematic and layout — catching power-rail, crystal, and GPIO-conflict issues before fabrication.</p>
+              <div class="project-tech">
+                <span>ESP32-S3</span>
+                <span>CC1101</span>
+                <span>PN532</span>
+                <span>KiCad</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/harshthorat-cpu/PLATYPULSE" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-image">
+              <img src="assets/img/watch-pcb.png" alt="3D render of the Smart-Watch wearable sensor PCB" loading="lazy">
+            </div>
+            <div class="project-info">
+              <h3>Smart-Watch — Wearable Sensor Platform</h3>
+              <p>An ESP32-based smartwatch built with a custom PCB and firmware written from the register level up. Includes hand-rolled ESP-IDF drivers for a BMP388 barometric altimeter, an LSM6DSO 6-axis IMU (I²C and SPI), a MAX30102 heart-rate / SpO₂ pulse-oximeter, and a MAX-M10S GNSS receiver. A collaboration with Paarth Shirsat.</p>
+              <div class="project-tech">
+                <span>ESP32</span>
+                <span>ESP-IDF</span>
+                <span>KiCad</span>
+                <span>Sensor Drivers</span>
+                <span>I²C / SPI</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Paarth-Shirsat/Smart-watch" target="_blank" rel="noopener noreferrer">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
                   Code
                 </a>
@@ -227,7 +415,7 @@
         <div class="projects-grid">
           <article class="project-card reveal">
             <div class="project-image">
-              <span>Screenshot</span>
+              <img src="assets/img/rover.svg" alt="Modular Mars rover with sensor mast and radio link" loading="lazy">
             </div>
             <div class="project-info">
               <h3>Multi-Sensor Mars Rover</h3>
@@ -238,18 +426,12 @@
                 <span>3D Printing</span>
                 <span>Sensors</span>
               </div>
-              <div class="project-links">
-                <a href="https://github.com/pushkardube" target="_blank" rel="noopener noreferrer">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                  Code
-                </a>
-              </div>
             </div>
           </article>
 
           <article class="project-card reveal">
             <div class="project-image">
-              <span>Screenshot</span>
+              <img src="assets/img/maze.svg" alt="Maze-solving robot navigating a grid" loading="lazy">
             </div>
             <div class="project-info">
               <h3>SAC — SRA Autosim Challenge <span class="project-badge">3rd Place</span></h3>
@@ -260,12 +442,6 @@
                 <span>IR Sensors</span>
                 <span>ESP32</span>
               </div>
-              <div class="project-links">
-                <a href="https://github.com/pushkardube" target="_blank" rel="noopener noreferrer">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                  Code
-                </a>
-              </div>
             </div>
           </article>
         </div>
@@ -275,7 +451,7 @@
         <div class="projects-grid">
           <article class="project-card reveal">
             <div class="project-image">
-              <span>Screenshot</span>
+              <img src="assets/img/portal.svg" alt="Role-based full-stack academic portal UI" loading="lazy">
             </div>
             <div class="project-info">
               <h3>Student-Faculty Academic Portal</h3>
@@ -286,18 +462,12 @@
                 <span>TypeScript</span>
                 <span>MySQL</span>
               </div>
-              <div class="project-links">
-                <a href="https://github.com/pushkardube" target="_blank" rel="noopener noreferrer">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                  Code
-                </a>
-              </div>
             </div>
           </article>
 
           <article class="project-card reveal">
             <div class="project-image">
-              <span>Screenshot</span>
+              <img src="assets/img/audio.svg" alt="ESP32 audio looper waveform" loading="lazy">
             </div>
             <div class="project-info">
               <h3>Audio Looper</h3>
@@ -308,18 +478,12 @@
                 <span>LM7805</span>
                 <span>Analog Audio</span>
               </div>
-              <div class="project-links">
-                <a href="https://github.com/pushkardube" target="_blank" rel="noopener noreferrer">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                  Code
-                </a>
-              </div>
             </div>
           </article>
 
           <article class="project-card reveal">
             <div class="project-image">
-              <span>Screenshot</span>
+              <img src="assets/img/hospital.svg" alt="Hospital management scheduling and records" loading="lazy">
             </div>
             <div class="project-info">
               <h3>Hospital Management System</h3>
@@ -330,47 +494,8 @@
                 <span>Jinja2</span>
                 <span>SQLite</span>
               </div>
-              <div class="project-links">
-                <a href="https://github.com/pushkardube" target="_blank" rel="noopener noreferrer">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                  Code
-                </a>
-              </div>
             </div>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Blog -->
-    <section class="section" id="blog">
-      <div class="container">
-        <div class="section-header reveal">
-          <h2 class="section-title">My <span class="accent-text">Blog</span></h2>
-          <p class="section-subtitle">Thoughts, tutorials, and things I've learned</p>
-        </div>
-        <div class="blog-grid">
-          <article class="blog-card reveal">
-            <span class="blog-card-date">February 15, 2026</span>
-            <h3><a href="blog/posts/my-first-post.html">My First Blog Post</a></h3>
-            <p>Welcome to my blog! In this post, I share why I started this website and what you can expect to find here.</p>
-            <div class="blog-card-tags">
-              <span>Personal</span>
-              <span>Web Dev</span>
-            </div>
-          </article>
-          <article class="blog-card reveal">
-            <span class="blog-card-date">Coming Soon</span>
-            <h3><a href="#">Building a Portfolio with Plain HTML & CSS</a></h3>
-            <p>A walkthrough of how I built this portfolio site without any frameworks — just vanilla HTML, CSS, and JavaScript.</p>
-            <div class="blog-card-tags">
-              <span>Tutorial</span>
-              <span>CSS</span>
-            </div>
-          </article>
-        </div>
-        <div class="blog-view-all reveal">
-          <a href="blog/index.html" class="btn btn-secondary">View All Posts</a>
         </div>
       </div>
     </section>
@@ -379,8 +504,8 @@
     <section class="section" id="contact">
       <div class="container">
         <div class="section-header reveal">
-          <h2 class="section-title">Get In <span class="accent-text">Touch</span></h2>
-          <p class="section-subtitle">Have a question or want to work together?</p>
+          <h2 class="section-title">Establish <span class="accent-text">Link</span></h2>
+          <p class="section-subtitle">Open to embedded / RF / wireless-security roles &amp; research collaborations</p>
         </div>
         <div class="contact-grid">
           <form class="contact-form reveal" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
@@ -402,8 +527,9 @@
             <div>
               <h3>Let's Connect</h3>
               <p>
-                I'm always open to discussing new projects, creative ideas,
-                or opportunities to be part of something great. Feel free to reach out!
+                Whether it's UWB and secure ranging, RF PCB design, or an embedded
+                project that needs firmware from the PHY up — I'd love to hear about it.
+                Reach out and let's talk signals.
               </p>
             </div>
             <div class="social-links">
@@ -429,6 +555,25 @@
       <p>&copy; 2026 Pushkar Dube. Built with HTML, CSS & JS.</p>
     </div>
   </footer>
+
+  <!-- Command palette (⌘K) -->
+  <div class="cmdk" id="cmdk" role="dialog" aria-modal="true" aria-label="Command palette">
+    <div class="cmdk-panel" role="document">
+      <div class="cmdk-input-row">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input class="cmdk-input" id="cmdkInput" type="text" placeholder="Jump to a section, project, or action…" autocomplete="off" spellcheck="false" aria-label="Command palette search">
+        <span class="cmdk-esc">ESC</span>
+      </div>
+      <div class="cmdk-list" id="cmdkList"></div>
+    </div>
+  </div>
+
+  <!-- UWB localizer overlay: anchors fixed around the page, cursor = tag -->
+  <canvas id="uwbLocalizer" aria-hidden="true"></canvas>
+  <div id="uwbHud" aria-hidden="true">
+    <span class="uwb-hud-title">UWB LOCALIZER</span>
+    <span class="uwb-hud-pos" id="uwbPos">TAG ⟨0.00, 0.00⟩ m</span>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

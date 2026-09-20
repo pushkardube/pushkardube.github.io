@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" fill="none">
+<defs><pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse">
+<path d="M20 0H0V20" stroke="#2de2d6" stroke-opacity="0.09" stroke-width="1"/></pattern></defs>
+<rect width="320" height="180" fill="url(#g)"/>
+<rect x="8" y="8" width="304" height="164" rx="8" stroke="#2de2d6" stroke-opacity="0.25"/>
+
+<rect x="55" y="35" width="210" height="110" stroke="#2de2d6" stroke-opacity="0.35"/>
+<line x1="60" y1="35" x2="60" y2="95" stroke="#2de2d6" stroke-opacity="0.3"/><line x1="93" y1="35" x2="93" y2="135" stroke="#2de2d6" stroke-opacity="0.3"/><line x1="126" y1="35" x2="126" y2="95" stroke="#2de2d6" stroke-opacity="0.3"/><line x1="159" y1="35" x2="159" y2="135" stroke="#2de2d6" stroke-opacity="0.3"/><line x1="192" y1="35" x2="192" y2="95" stroke="#2de2d6" stroke-opacity="0.3"/><line x1="225" y1="35" x2="225" y2="135" stroke="#2de2d6" stroke-opacity="0.3"/>
+<path d="M72 128 L72 60 L105 60 L105 120 L138 120 L138 55 L171 55 L171 120 L204 120 L204 60 L237 60" stroke="#37e06b" stroke-width="2" stroke-dasharray="4 4"/>
+<path d="M66 122 l12 6 l-12 6 z" fill="#37e06b"/>
+<text x="18" y="166" font-family="JetBrains Mono,monospace" font-size="9" fill="#7f9aa0" letter-spacing="1">MAZE SOLVER · 3RD PLACE</text>
+</svg>

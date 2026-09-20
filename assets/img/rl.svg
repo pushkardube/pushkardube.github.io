@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" fill="none">
+<defs><pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse">
+<path d="M20 0H0V20" stroke="#2de2d6" stroke-opacity="0.09" stroke-width="1"/></pattern></defs>
+<rect width="320" height="180" fill="url(#g)"/>
+<rect x="8" y="8" width="304" height="164" rx="8" stroke="#2de2d6" stroke-opacity="0.25"/>
+
+<line x1="40" y1="130" x2="280" y2="130" stroke="#7f9aa0" stroke-opacity="0.5"/>
+<line x1="40" y1="30" x2="40" y2="130" stroke="#7f9aa0" stroke-opacity="0.5"/>
+<path d="M40 122 C90 120 120 95 150 80 S210 52 280 46" stroke="#37e06b" stroke-width="2.5"/>
+<path d="M40 124 C95 118 140 112 185 95 S250 70 280 66" stroke="#2de2d6" stroke-width="1.4" stroke-opacity="0.6" stroke-dasharray="3 4"/>
+<circle cx="40" cy="120" r="1.6" fill="#2de2d6" fill-opacity="0.6"/><circle cx="53" cy="111" r="1.6" fill="#2de2d6" fill-opacity="0.6"/><circle cx="66" cy="102" r="1.6" fill="#2de2d6" fill-opacity="0.6"/><circle cx="79" cy="114" r="1.6" fill="#2de2d6" fill-opacity="0.6"/><circle cx="92" cy="105" r="1.6" fill="#2de2d6" fill-opacity="0.6"/><circle cx="105" cy="96" r="1.6" fill="#2de2d6" fill-opacity="0.6"/><circle cx="118" cy="108" r="1.6" fill="#2de2d6" fill-opacity="0.6"/><circle cx="131" cy="99" r="1.6" fill="#2de2d6" fill-opacity="0.6"/><circle cx="144" cy="90" r="1.6" fill="#2de2d6" fill-opacity="0.6"/><circle cx="157" cy="102" r="1.6" fill="#2de2d6" fill-opacity="0.6"/><circle cx="170" cy="93" r="1.6" fill="#2de2d6" fill-opacity="0.6"/><circle cx="183" cy="84" r="1.6" fill="#2de2d6" fill-opacity="0.6"/><circle cx="196" cy="96" r="1.6" fill="#2de2d6" fill-opacity="0.6"/><circle cx="209" cy="87" r="1.6" fill="#2de2d6" fill-opacity="0.6"/><circle cx="222" cy="78" r="1.6" fill="#2de2d6" fill-opacity="0.6"/><circle cx="235" cy="90" r="1.6" fill="#2de2d6" fill-opacity="0.6"/><circle cx="248" cy="81" r="1.6" fill="#2de2d6" fill-opacity="0.6"/><circle cx="261" cy="72" r="1.6" fill="#2de2d6" fill-opacity="0.6"/>
+<text x="250" y="40" font-family="JetBrains Mono,monospace" font-size="10" fill="#37e06b">P↑ E↓</text>
+<text x="18" y="166" font-family="JetBrains Mono,monospace" font-size="9" fill="#7f9aa0" letter-spacing="1">REINFORCEMENT LEARNING · REWARD</text>
+</svg>

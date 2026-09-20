@@ -9,7 +9,7 @@
   (function () {
     var root = document.documentElement;
     var btn = document.getElementById('themeToggle');
-    function current() { return root.getAttribute('data-theme') || 'dark'; }
+    function current() { return root.getAttribute('data-theme') || 'light'; }
     function apply(t) {
       root.setAttribute('data-theme', t);
       try { localStorage.setItem('theme', t); } catch (e) {}
@@ -350,7 +350,7 @@
   }
   function toggleTheme() {
     const root = document.documentElement;
-    const t = (root.getAttribute('data-theme') || 'dark') === 'dark' ? 'light' : 'dark';
+    const t = (root.getAttribute('data-theme') || 'light') === 'dark' ? 'light' : 'dark';
     root.setAttribute('data-theme', t);
     try { localStorage.setItem('theme', t); } catch (e) {}
     window.dispatchEvent(new CustomEvent('themechange', { detail: t }));

@@ -1620,3 +1620,8 @@ button {
 
 @media (max-width: 860px) { .scroll-rail { display: none; } }
 @media (prefers-reduced-motion: reduce) { .rail-carriage { transition: none; } }
+
+/* rail is draggable to scrub */
+.rail-track { cursor: pointer; }
+.rail-carriage { cursor: grab; }
+.rail-carriage:active { cursor: grabbing; }

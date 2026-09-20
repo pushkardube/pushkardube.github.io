@@ -467,6 +467,26 @@
     stops.forEach((st, i) => { if (yOf(st) - 2 <= y) idx = i; });
     if (idx !== active) { active = idx; stops.forEach((st, k) => st.tick.classList.toggle('on', k === idx)); }
   }
+  // drag / click the rail to scrub the page
+  const track = rail.querySelector('.rail-track');
+  let dragging = false;
+  function scrub(e) {
+    const r = track.getBoundingClientRect();
+    const frac = Math.min(1, Math.max(0, (e.clientY - r.top) / r.height));
+    window.scrollTo({ top: frac * docMax() });
+  }
+  if (track) {
+    track.addEventListener('pointerdown', e => {
+      if (e.target.closest('.rail-tick')) return; // let ticks handle their own click
+      dragging = true;
+      document.body.style.userSelect = 'none';
+      scrub(e);
+      e.preventDefault();
+    });
+    window.addEventListener('pointermove', e => { if (dragging) scrub(e); }, { passive: true });
+    window.addEventListener('pointerup', () => { dragging = false; document.body.style.userSelect = ''; });
+  }
+
   function refresh() { placeTicks(); update(); }
   window.addEventListener('scroll', update, { passive: true });
   window.addEventListener('resize', refresh);
